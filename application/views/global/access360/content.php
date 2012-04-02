@@ -21,7 +21,6 @@
     ?>
 
 
-    <?php $body = str_replace("Loughton Seedbed Centre", "<strong>Loughton Seedbed Centre</strong>", "$body"); ?>
 
 
 

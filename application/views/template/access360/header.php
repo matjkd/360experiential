@@ -1,9 +1,9 @@
 <!-- Basic Page Needs
   ================================================== -->
 <meta charset="utf-8">
-<title>EFI (Loughton) Ltd. The Loughton Seedbed Centre</title>
-<meta name="description" content="Loughton Seedbed Centre Essex modern light industrial units Easy in Easy out rental">
-<meta name="keywords" content="industrial,units,workspace,to,let,rent,loughton,essex,m11,m25">
+<title>Access360</title>
+<meta name="description" content="Access360">
+<meta name="keywords" content="access360">
 
 <meta name="author" content="">
 
@@ -30,5 +30,7 @@
 <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url() ?>images/apple-touch-icon-114x114.png">
 
 
+    <!--Adobe Edge Runtime-->
+    <script type="text/javascript" charset="utf-8" src="<?=base_url()?>js/smoke_edgePreload.js"></script>
+<!--Adobe Edge Runtime End-->
 
-</script>

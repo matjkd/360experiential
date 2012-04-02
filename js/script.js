@@ -60,11 +60,7 @@ jQuery(function() {
 
 
 
-//jquery ui buttons
-$(function() {
-    $("button, input:submit").button();
-		
-});
+
 
 
 //date picker on menu page
@@ -99,25 +95,38 @@ $(document).ready(function() {
     
     
 /*************************************************
-    /*    fix background width
+    /*    fix footer to bottom and smoke above it
     /***********************************************/
-$(document).ready(function() {
-    var windowwidth = $(window).width(),
-    contenttop = $('#contenttop').offset().top,
-    adjustment = contenttop - 100,
-    filleradjust =  contenttop + 200;
-   
-  
-    $('#fullbackground img').css("width", windowwidth);
-    $('#whitefade').css("top", adjustment);
-    $('#whitefadefiller').css("top", filleradjust);
-    $('#fullbackground').fadeIn();
+
+$(function(){
+    $(window).resize(function(){
+        placeFooter();
+        centerCloud();
+    });
+    placeFooter();
+     centerCloud();
+    // hide it before it's positioned
+    $('#fixedbase').css('display','inline');
 });
+
+function placeFooter() {    
+    var windHeight = $(window).height();
+    var footerHeight = $('#fixedbase').height();
+    var offset = parseInt(windHeight) - parseInt(footerHeight);
+    var smokeoffset = parseInt(offset) -  parseInt(footerHeight)+20;
+    $('#fixedbase').css('top',offset);
+     $('#fixedsmoke').css('top',smokeoffset);
+}
+
+
+function centerCloud() {
+    var windWidth = $(window).width();
+    var cloudWidth = $('#cloudpopup').width();
+    var widthoffset = (parseInt(windWidth)/2) - (parseInt(cloudWidth)/2) ;
+    $('#cloudpopup').css('left',widthoffset);
     
-$(window).resize(function() {
-    var windowwidth = $(window).width();
-    $('#fullbackground img').css("width", windowwidth);
-});
+    
+}
 
 
 
@@ -192,49 +201,7 @@ $(document).ready(function() {
   
             
              
-    /*****************************************
-    /* Sticky Nav 
-    /****************************************/
-
-    var navPos = $('.nav').offset().top;
-    var featuresPos = $('.features').offset().top;
-
-    $(window).on('scroll', function(evt) {
-        var scrollTop = $(this).scrollTop()
-        winHeight = $(window).height();
-
-        window.clearTimeout(window.timeout);
-
-        window.timeout = setTimeout(function() {
-            // Set the sticky nav
-            if (scrollTop > navPos) {
-                $('.nav').not('.sticky').addClass('sticky');
-            
-            } else {
-                $('.nav.sticky').removeClass('sticky');
-            }
-            
-            if (scrollTop > (featuresPos-20)) {
-                $('.features').not('.sticky2').addClass('sticky2');
-                $('.sticky2').stop().animate({
-              
-                    top: scrollTop-250
-            
-                },
-                150
-                );
-                
-               
-               
-            } else {
-                $('.features.sticky2').removeClass('sticky2');
-             
-            }
-            
-
   
-        }, 10);
-    });
     
            
     /*****************************************
@@ -268,83 +235,7 @@ $(document).ready(function() {
   
     });
     
-    /*******************************************
-    /* Central Services rollovers
-     /****************************************/
-    
-    $('.services').mouseenter(function() {
-           
-        $(this).stop().animate({
-            backgroundColor:"#51a5fc"
-              
-             
-        },
-        150
-        );
-         
-             
-        
-           
-    });
-    $('.services').click(function() {
-        var serviceid = "#box_" +$(this).attr('id');
-            
-        $(".service").stop().animate({
-            backgroundColor:"#5687B5"
-              
-             
-        },
-        150
-        );
-        $(serviceid).stop().animate({
-            backgroundColor:"#51a5fc"
-              
-             
-        },
-        150
-        );
-        
-           
-    });
-         
-         
-     
-         
-               
-    $('.services').mouseleave(function() {
-            
-        $(this).stop().animate({
-            backgroundColor:"#077eff"
-              
-             
-        },
-        150
-        );
-  
-               
-    });
-    
-    
-     $('.service').click(function() {
-       
-            
-        $(".service").stop().animate({
-            backgroundColor:"#5687B5"
-              
-             
-        },
-        150
-        );
-        $(this).stop().animate({
-            backgroundColor:"#51a5fc"
-              
-             
-        },
-        150
-        );
-        
-           
-    });
+   
     
   
     

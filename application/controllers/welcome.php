@@ -16,7 +16,7 @@ class Welcome extends MY_Controller {
         if ($segment_active != NULL) {
             $data['menu'] = $this->uri->segment(2);
         } else {
-            $data['menu'] = 'home';
+            $data['menu'] = 'experiential';
         }
 
         $this->get_content_data($data['menu']);
