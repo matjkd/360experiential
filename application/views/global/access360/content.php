@@ -24,6 +24,16 @@
 
 
         <div class="container" style="width:860px; background:#fff; padding:50px">
+        
+        
+		<?php if (isset($slideshow) && $slideshow != NULL) { ?>
+		<div class="container">
+			<?= $this->load->view('slideshow/' . $slideshow) ?>
+		</div>
+		<?php } ?>
+        
+        
+        
             <div id="column1">
     <?= $body ?>
             </div>

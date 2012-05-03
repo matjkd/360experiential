@@ -13,7 +13,7 @@
 <!-- scripts concatenated and minified via ant build script-->
 
 <script src="<?= base_url() ?>js/wymeditor/jquery.wymeditor.min.js"></script>
-<script src="<?= base_url() ?>js/cloud-carousel.1.0.5.min.js"></script>
+<script src="<?= base_url() ?>js/jquery.easyAccordion.js"></script>
 <script src="<?= base_url() ?>js/plugins.js"></script>
 
 <script src="<?= base_url() ?>js/script.js"></script>
@@ -24,23 +24,11 @@
   /***********************************************/
 $(document).ready(function(){
 						   
-    // This initialises carousels on the container elements specified, in this case, carousel1.
-    $("#carousel1").CloudCarousel(		
-    {			
-        xPos: 480,
-        yPos: 80,
-        buttonLeft: $("#but1"),
-        buttonRight: $("#but2"),
-        yRadius:140,
-        altBox: $("#alt-text"),
-        titleBox: $("#title-text"),
-        autoRotate: 'no',
-        autoRotateDelay: 3000,
-        speed:0.1,
-        bringToFront: true,
-        reflHeight:50
-    }
-    );
+    // This initialises carousels on the container elements specified, in this case, accordion1.
+	 $('#accordion-1').easyAccordion({ 
+         autoStart: true, 
+         slideInterval: 3000
+ });
 });
 
 </script>

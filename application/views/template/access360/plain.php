@@ -18,11 +18,6 @@
 		<?= $this->load->view('global/' . $this->config_theme . '/content') ?>
 
 
-		<?php if (isset($slideshow) && $slideshow != NULL) { ?>
-		<div class="container">
-			<?= $this->load->view('slideshow/' . $slideshow) ?>
-		</div>
-		<?php } ?>
 
 
 
