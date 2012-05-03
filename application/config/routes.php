@@ -39,8 +39,8 @@
 */
 
 $route['default_controller'] = "welcome";
-$route['about'] = '/welcome/home';
-$route['tenants'] = '/welcome/home';
+$route['about'] = '/welcome/content';
+$route['portfolio'] = '/welcome/content';
 $route['mailbox'] = '/welcome/home';
 $route['map'] = '/welcome/home';
 $route['contact'] = '/welcome/home';

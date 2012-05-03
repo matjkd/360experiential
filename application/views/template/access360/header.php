@@ -10,7 +10,7 @@
 <!-- Mobile Specific Metas
 ================================================== -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
 <!-- CSS
 ================================================== -->
 <link rel="stylesheet" href="<?= base_url() ?>css/<?=$this->config_theme?>/base.css">
@@ -30,7 +30,4 @@
 <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url() ?>images/apple-touch-icon-114x114.png">
 
 
-    <!--Adobe Edge Runtime-->
-    <script type="text/javascript" charset="utf-8" src="<?=base_url()?>js/smoke_edgePreload.js"></script>
-<!--Adobe Edge Runtime End-->
 

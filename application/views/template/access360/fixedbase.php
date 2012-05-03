@@ -1,9 +1,34 @@
  <div  id="fixedbase">
             
             <div class="container">
-                <div id="ideas" class="six columns">&nbsp;</div>
-                <div id="machine" class="ten columns">
-                <img src="<?=base_url()?>images/template/360experiential/machine.png"/>
+                
+                <div id="machine" class="sixteen columns">
+                    <div id="Stage" class="machine">
+               
+                </div>
+            </div>
+                
+                   <div class="container">
+                
+                <div id="footermenu" class="sixteen columns">
+                    
+                   <p> <strong>We turn your ideas into reality.</strong> Guerilla, viral, ambient - whatever space you have, whatever idea you have - talk to us.</p>
+                   
+                   <div id="menubutton">
+                       
+                       <img src="<?=base_url()?>images/titles/about.png"/>
+                   </div>
+                   
+                        <div id="menubutton">
+                       
+                       <img src="<?=base_url()?>images/titles/whatwedo.png"/>
+                   </div>
+                   
+                        <div id="menubutton">
+                       
+                       <img src="<?=base_url()?>images/titles/whatwedone.png"/>
+                   </div>
+               
                 </div>
             </div>
             

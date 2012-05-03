@@ -35,7 +35,7 @@ class Welcome extends MY_Controller {
             $data['message'] = $this->session->flashdata('message');
         }
 
-      
+
         $this->load->vars($data);
         $this->load->view('template/main');
     }
@@ -50,7 +50,7 @@ class Welcome extends MY_Controller {
             $data['topsection'] = $row->topsection;
             $data['meta_keywords'] = $row->meta_desc;
             $data['meta_description'] = $row->meta_keywords;
-            $data['slideshow_active'] = $row->slideshow;
+           
             $data['mainsize'] = $row->mainsize;
             $data['rightsize'] = $row->rightsize;
             $data['slideshow'] = $row->slideshow;
@@ -58,6 +58,36 @@ class Welcome extends MY_Controller {
         endforeach;
         $this->load->vars($data);
         return $data;
+    }
+    
+    function content() {
+        
+        $segment_active = $this->uri->segment(1);
+        if ($segment_active != NULL) {
+            $data['menu'] = $this->uri->segment(1);
+        } else {
+            $data['menu'] = 'experiential';
+        }
+
+        $this->get_content_data($data['menu']);
+
+        $data['captcha'] = $this->captcha_model->initiate_captcha();
+        $data['seo_links'] = $this->content_model->get_seo_links();
+
+
+
+        $data['sidebar'] = "sidebox/side";
+        $data['main_content'] = "global/" . $this->config_theme . "/content";
+        $data['cats'] = $this->products_model->get_cats();
+        $data['products'] = $this->products_model->get_all_products();
+        $data['section2'] = 'global/links';
+        if ($this->session->flashdata('message')) {
+            $data['message'] = $this->session->flashdata('message');
+        }
+
+
+        $this->load->vars($data);
+        $this->load->view('template/plain');
     }
 
     function test() {
@@ -76,7 +106,7 @@ class Welcome extends MY_Controller {
         }
 
         $this->get_content_data($data['menu']);
-        
+
         $data['captcha'] = $this->captcha_model->initiate_captcha();
 
         $data['sidebar'] = "sidebox/side";
@@ -89,7 +119,7 @@ class Welcome extends MY_Controller {
             $data['message'] = $this->session->flashdata('message');
         }
 
-     
+
         $this->load->vars($data);
         $this->load->view('template/main');
     }
@@ -121,7 +151,7 @@ class Welcome extends MY_Controller {
             $data['message'] = $this->session->flashdata('message');
         }
 
-      
+
         $this->load->vars($data);
         $this->load->view('template/main');
     }

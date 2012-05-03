@@ -26,17 +26,6 @@ window.log = function(){
     }
 };
 
-$(document).ready(function() {
-    $('.slideshow').cycle({
-        speedIn:  2000,
-        speedOut: 2000,
-        timeout:   10000,
-        fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-    });
-    $('.slideshow').css("display", "block");
-});
-       
-$.backstretch("https://s3-eu-west-1.amazonaws.com/grandgardendesigns/background.jpg");
 
 // catch all document.write() calls
 (function(doc){
@@ -63,36 +52,10 @@ jQuery(function() {
 
 
 
-//date picker on menu page
-
-$(document).ready(function() {
-    $( "#datepicker" ).datepicker({
-        dateFormat : 'DD, d MM, yy',
-        onSelect : function(dateText, inst)
-        {
-            var epoch = $.datepicker.formatDate('@', $(this).datepicker('getDate')) / 1000;
-
-            $('#alternate').val(epoch);
-        }
-    });
-
-
-    $( "#datepicker2" ).datepicker({
-        dateFormat : 'DD, d MM, yy',
-        onSelect : function(dateText, inst)
-        {
-            var epoch = $.datepicker.formatDate('@', $(this).datepicker('getDate')) / 1000;
-
-            $('#alternate2').val(epoch);
-        }
-    });
-
-
-});
 
 
 
-    
+
     
 /*************************************************
     /*    fix footer to bottom and smoke above it
@@ -104,7 +67,7 @@ $(function(){
         centerCloud();
     });
     placeFooter();
-     centerCloud();
+    centerCloud();
     // hide it before it's positioned
     $('#fixedbase').css('display','inline');
 });
@@ -113,9 +76,9 @@ function placeFooter() {
     var windHeight = $(window).height();
     var footerHeight = $('#fixedbase').height();
     var offset = parseInt(windHeight) - parseInt(footerHeight);
-    var smokeoffset = parseInt(offset) -  parseInt(footerHeight)+20;
+    var smokeoffset = parseInt(offset) -  parseInt(footerHeight)+440;
     $('#fixedbase').css('top',offset);
-     $('#fixedsmoke').css('top',smokeoffset);
+    $('#fixedsmoke').css('top',smokeoffset);
 }
 
 
@@ -129,114 +92,83 @@ function centerCloud() {
 }
 
 
+/******************************************
+  /* Cloud Popup and hover functions
+  /*****************************************/
+           
+function CloudpopUp() {
+  
+    $('#cloudpopup').stop().fadeIn();
+  
+    
+} 
+
+function hideCloudpopUp() {
+    $('#cloudpopup').stop().fadeOut();
+      
+}
+
+function hoverMenu(menu, cloud) {
+    
+    $(menu).hover(
+        function() {
+            $(cloud).stop(true, true).fadeIn();
+        },
+        function() {
+            $(cloud).stop(true, true).fadeOut();
+        }
+        );
+
+
+    
+    
+}
+
+
+
 
 
  
     
 $(document).ready(function() {   
     
-    /*************************************************
-    /*    blue button hover
-    /***********************************************/
-    $(".bluebox").hover(
-        function() {
+    /******************************************
+  /* handle Cloud Popup 
+  /*****************************************/
+    var  mouse_is_inside;
+  
+  
+    $('#cloudpopup').hover(function(){
+        mouse_is_inside=true;
+    }, function(){
+        mouse_is_inside=false;
+    });
+  
+  
         
-            $(this).stop().animate({
-                backgroundColor:"#51a5fc",
-                height: '116px',
-                marginBottom: 0,
-                marginTop: 0
-            },
-            150
-            );
-               
-            $(this).find('.clickhere').fadeIn(100);        
-        },
-        function() {
-        
-            $(this).stop().animate({
-                backgroundColor:"#077eff",
-                height: '100px',
-                marginBottom: 8,
-                marginTop: 8
+    $("body").mouseup(function(){ 
             
-            },
-            150
-            );
-            $(".clickhere").fadeOut(100);
-        }
-        );
-            
-               
-    /*************************************************
-    /*    feature box hover
-    /***********************************************/
-    $(".feature_box").hover(
-        function() {
-        
-            $(this).stop().animate({
-                backgroundColor:"#51a5fc"
+        if($('#cloudpopup').is(":visible")) {
+      
+            if(! mouse_is_inside) {
+                hideCloudpopUp()
+            }
+        } else {
               
-             
-            },
-            150
-            );
-               
-            $(this).find('.clickhere').fadeIn(100);        
-        },
-        function() {
-        
-            $(this).stop().animate({
-                backgroundColor:"#5687b5"
-               
-               
+    }
             
-            },
-            150
-            );
-            $(".clickhere").fadeOut(100);
-        }
-        );
             
-  
-            
-             
-  
-    
            
-    /*****************************************
-    /* Scroll to 
-     /****************************************/
-    $('.feature_box a').on('click', function(evt) {
-        $.scrollTo($(this).attr('href'), 800, {
-            offset:-40
-        });
     
-        return false;
-   
+        
     });
-    
-    $('.services_box a').on('click', function(evt) {
-        $.scrollTo($(this).attr('href'), 800, {
-            offset:-40
-        });
+ 
+    /******************************************
+  /* handle Menu Hover
+  /*****************************************/
       
-        return false;
-   
-  
-    });
-    $('.service a').on('click', function(evt) {
-        $.scrollTo($(this).attr('href'), 800, {
-            offset:-40
-        });
-      
-        return false;
-   
-  
-    });
-    
-   
-    
-  
+    hoverMenu('#about-menu', '#about-cloud');
+    hoverMenu('#what-menu', '#what-cloud');
+    hoverMenu('#portfolio-menu', '#portfolio-cloud');
     
 });
