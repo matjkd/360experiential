@@ -63,13 +63,14 @@ strong {
 #cloudpopup {
     position:absolute;
     display:none;
-    top:15%;
+    top:35%;
     z-index:300;
     margin:0 auto;
     width:600px;
     height:320px;
     background:url('background/cloudPopup.png');
     color:#1f313f;
+    opacity:0.9;
 }
 
 

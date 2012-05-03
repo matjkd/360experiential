@@ -5,7 +5,7 @@
     </div>
 
     <div class="menubutton">
-        <h4><a id="what-menu" href="<?= base_url() ?>about">What we do</a></h4>
+        <h4><span id="what-menu" >What we do</span></h4>
 
     </div>
 

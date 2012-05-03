@@ -2,6 +2,9 @@ application/config/database.php
 application/config/config.php
 images/captcha/*
 nbproject/*
+.project
+.buildpath
+.settings/
 stats/*
 .htaccess
 *.*~
