@@ -7,7 +7,7 @@
 </head>
 <body style="margin: 0; padding: 0;">
 
-	<div style="width: 960px; position: relative;">
+	<div style="width: 960px; margin:0 auto; position: relative;">
 		<!--   hidden input to pass base url to js files-->
 		<input type="hidden" id="baseurl" value="<?= base_url() ?>" />
 
@@ -27,7 +27,7 @@
 
 
 
-test
+
 
 
 

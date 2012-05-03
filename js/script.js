@@ -122,5 +122,7 @@ $(document).ready(function() {
 	hoverMenu('#portfolio-menu', '#portfolio-cloud');
 
 	$('#about-menu').click(CloudpopUp);
+	
+	$('#what-menu').click(CloudpopUp);
 
 });
