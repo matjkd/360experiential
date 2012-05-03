@@ -66,8 +66,12 @@ function centerCloud() {
 
 function CloudpopUp() {
 
-	$('#cloudpopup').stop().fadeIn();
+	if ($('#cloudpopup').is(":visible")) {
+		$('#cloudpopup').stop(true, true).fadeOut();
+	} 
 
+		$('#cloudpopup').stop(true, true).fadeIn();
+	
 }
 
 function hideCloudpopUp() {
@@ -122,7 +126,7 @@ $(document).ready(function() {
 	hoverMenu('#portfolio-menu', '#portfolio-cloud');
 
 	$('#about-menu').click(CloudpopUp);
-	
+
 	$('#what-menu').click(CloudpopUp);
 
 });
