@@ -11,11 +11,13 @@
 ================================================== -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
 <!-- CSS
 ================================================== -->
 <link rel="stylesheet" href="<?= base_url() ?>css/<?=$this->config_theme?>/base.css">
 <link rel="stylesheet" href="<?= base_url() ?>css/<?=$this->config_theme?>/skeleton.css">
 <link rel="stylesheet" href="<?= base_url() ?>css/<?=$this->config_theme?>/layout.css">
+<link rel="stylesheet" href="<?= base_url() ?>css/<?=$this->config_theme?>/accordion.css">
 <link rel="stylesheet" href="<?= base_url() ?>css/<?=$this->config_theme?>/template.css">
 
 <!--[if lt IE 9]>
