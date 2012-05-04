@@ -3,7 +3,7 @@
 	<dl>
 		<dt>First slide</dt>
 		<dd>
-		
+		<div>
 		<div  style="float:left;">
     <a href="<?=base_url()?>"><img src="<?=base_url()?>images/experientialLogoSmaller.png"/></a>
    </div>
@@ -14,13 +14,14 @@
 				sociis natoque penatibus et magnis dis parturient montes, nascetur
 				ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
 				pretium quis, sem. Nulla consequat massa quis parturient montes,
-				nascetur ridiculus mus. Donec quam felis, ultricies nec,
+				nascetur ridiculus mus. Donec quam felis, ultricies nec, 
 				pellentesque eu, enim.<br /> <a href="#" class="more">Read more</a>
 			</p></div>
-			
+			</div>
 		</dd>
 		<dt>Second slide</dt>
 		<dd>
+		<div>
 			<div  style="float:left;">
     <a href="<?=base_url()?>"><img src="<?=base_url()?>images/experientialLogoSmaller.png"/></a>
    </div>
@@ -34,12 +35,13 @@
 				nascetur ridiculus mus. Donec quam felis, ultricies nec,
 				pellentesque eu, enim.<br /> <a href="#" class="more">Read more</a>
 			</p></div>
+			</div>
 		</dd>
 		<dt>One more slide</dt>
 		<dd>
 			<h2>One more slide to go here</h2>
 			<p>
-				<img src="images/monsters/img3.png" alt="Alt text to go here" />Cum
+				Cum
 				sociis natoque penatibus et magnis dis parturient montes, nascetur
 				ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
 				pretium quis, sem. Nulla consequat massa quis parturient montes,
@@ -51,7 +53,7 @@
 		<dd>
 			<h2>Another slide to go here</h2>
 			<p>
-				<img src="images/monsters/img4.png" alt="Alt text to go here" />Cum
+				Cum
 				sociis natoque penatibus et magnis dis parturient montes, nascetur
 				ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
 				pretium quis, sem. Nulla consequat massa quis parturient montes,
@@ -61,9 +63,9 @@
 		</dd>
 		<dt>Wow one more</dt>
 		<dd>
-			<h2>Unbilievable one more slide here</h2>
+			<h2>One more slide here</h2>
 			<p>
-				<img src="images/monsters/img5.png" alt="Alt text to go here" />Cum
+				Cum
 				sociis natoque penatibus et magnis dis parturient montes, nascetur
 				ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
 				pretium quis, sem. Nulla consequat massa quis parturient montes,
@@ -75,7 +77,7 @@
 		<dd>
 			<h2>This is definitely the last one</h2>
 			<p>
-				<img src="images/monsters/img6.png" alt="Alt text to go here" />Cum
+				Cum
 				sociis natoque penatibus et magnis dis parturient montes, nascetur
 				ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
 				pretium quis, sem. Nulla consequat massa quis parturient montes,
@@ -85,9 +87,9 @@
 		</dd>
 		<dt>Really Last one</dt>
 		<dd>
-			<h2>No, one more actually</h2>
+			<h2>Except this one</h2>
 			<p>
-				<img src="images/monsters/img6.png" alt="Alt text to go here" />Cum
+				Cum
 				sociis natoque penatibus et magnis dis parturient montes, nascetur
 				ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
 				pretium quis, sem. Nulla consequat massa quis parturient montes,

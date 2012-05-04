@@ -13,7 +13,7 @@
 		<div class="container" id="header">
 			<?= $this->load->view('global/' . $this->config_theme . '/header') ?>
 		</div>
-
+     
 		<?= $this->load->view('global/' . $this->config_theme . '/content') ?>
 
 
