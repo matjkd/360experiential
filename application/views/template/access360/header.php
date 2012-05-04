@@ -12,6 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
 <!-- CSS
 ================================================== -->
 <link rel="stylesheet" href="<?= base_url() ?>css/<?=$this->config_theme?>/base.css">

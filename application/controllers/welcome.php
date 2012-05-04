@@ -86,8 +86,14 @@ class Welcome extends MY_Controller {
         }
 
 
+        
+      if($data['menu'] == 'portfolio') {
+       $this->load->vars($data);
+        $this->load->view('template/access360/portfolio');
+      } else {
         $this->load->vars($data);
         $this->load->view('template/plain');
+        }
     }
 
     function test() {

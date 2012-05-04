@@ -20,6 +20,20 @@ var symbols = {
    content: {
          dom: [
          {
+            id:'shadow',
+            type:'image',
+            rect:[0,0,279,19],
+            fill:["rgba(0,0,0,0)",im+"shadow.png"],
+            transform:[[502,481],[0,0],[0],[1,1]]
+         },
+         {
+            id:'shadow2',
+            type:'image',
+            rect:[261,316,279,19],
+            fill:["rgba(0,0,0,0)",im+"shadow.png"],
+            transform:[[483,169],[0,0],[0],[0.4402,0.4729]]
+         },
+         {
             id:'smoke_puffCopy3',
             type:'rect',
             rect:[431,207,0,0]

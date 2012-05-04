@@ -3,9 +3,15 @@
 
 
 <?php foreach ($content as $row): ?>
-<div class="container" style="width:860px;  padding:0 50px;">
-        <h2><?= $row->title ?></h2>
+
+<div class="container" style="width:860px; height:60px;  padding:0 50px;">
+      <?php if($menu == 'portfolio') {} else {?>  <h1><?= $row->title ?></h1><?php } ?>
 </div>
+<?php if (isset($slideshow) && $slideshow != NULL) { ?>
+		<div class="container">
+			<?= $this->load->view('slideshow/' . $slideshow) ?>
+		</div>
+		<?php } else { ?>
     <?php
     $is_logged_in = $this->session->userdata('is_logged_in');
     if (!isset($is_logged_in) || $is_logged_in == true) {
@@ -26,11 +32,7 @@
         <div class="container" style="width:860px; background:#fff; padding:50px">
         
         
-		<?php if (isset($slideshow) && $slideshow != NULL) { ?>
-		<div class="container">
-			<?= $this->load->view('slideshow/' . $slideshow) ?>
-		</div>
-		<?php } ?>
+		
         
         
         
@@ -41,8 +43,9 @@
                <div id="column2">
     <?= $body ?>
             </div>
+            <?php } ?>
         
-<?php endforeach; ?>
+<?php endforeach;   ?>
 
 
 <?php foreach ($content as $row): ?>

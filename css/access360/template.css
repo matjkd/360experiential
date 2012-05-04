@@ -18,6 +18,9 @@ body {
 strong {
     color: #555;
     }
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+    }
 #fullbackground {
     position: absolute;
     z-index: -10;
@@ -396,7 +399,6 @@ root {
     z-index: 1;
     }
 #red-footer {
-
     font-size: 0.8em;
     text-align: center;
     padding-top: 10px;
@@ -405,7 +407,7 @@ root {
     color: #fff;
     }
 #red-footer strong {
-font-family: 'Bree Serif', serif;
+    font-family: 'Bree Serif', serif;
     color: #333;
     font-weight: bold;
     }

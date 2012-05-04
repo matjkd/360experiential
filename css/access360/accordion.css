@@ -73,15 +73,15 @@ dd p {
     line-height: 120%;
     }
 #accordion-1 {
-    width: 870px;
-    height: 295px;
+    width: 950px;
+    height: 395px;
     padding: 0px;
     background: #fff;
     border: 5px solid #ddd;
     }
 #accordion-1 dl {
-   width: 870px;
-    height: 295px;
+    width: 960px;
+    height: 395px;
     }
 #accordion-1 dt {
     height: 36px;
@@ -92,14 +92,13 @@ dd p {
     font-weight: bold;
     font-family: Tahoma, Geneva, sans-serif;
     text-transform: uppercase;
-   
-    background: #fff 0 0 no-repeat;
-    color: #26526c;
+    background: #555 0 0 no-repeat;
+    color: #fff;
     }
 #accordion-1 dt.active {
     cursor: pointer;
     color: #fff;
-    background:  #ca3301  0 0 no-repeat;
+    background: #ca3301  0 0 no-repeat;
     }
 #accordion-1 dt.hover {
     color: #68889b;
@@ -108,9 +107,9 @@ dd p {
     color: #fff;
     }
 #accordion-1 dd {
-    padding: 25px;
-    background: #ddd url(images/slide.jpg) bottom left repeat-x;
-    border: 1px solid #dbe9ea;
+    padding: 0px;
+    background: #fff;
+    border: 0px solid #dbe9ea;
     border-left: 0;
     margin-right: 3px;
     }
@@ -136,4 +135,17 @@ dd p {
 #accordion-1 .more {
     padding-top: 10px;
     display: block;
+    }
+#accordion-heading {
+    height: 55px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    margin-top: 10px;
+    background: #ddd;
+    }
+#accordion-body {
+    padding-left: 20px;
+    padding-right: 170px;
+    margin-top: 10px;
     }
