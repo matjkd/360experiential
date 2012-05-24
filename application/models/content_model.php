@@ -175,6 +175,55 @@ class Content_model extends CI_Model {
         $insert = $this->db->insert('content', $form_data);
         return $insert;
     }
+    
+    
+    function add_case_study() {
+    
+    	
+    
+    	$now = time();
+    	$datetime = $now;
+    	$form_data = array(
+    			'case_title' => set_value('title'),
+    			'description' => $this->input->post('content'),
+    		
+    			'date_added' => $datetime
+    	);
+    	$insert = $this->db->insert('case_studies', $form_data);
+    	return $insert;
+    }
+    
+    /**
+     *
+     * @param type $filename
+     * @param type $blog_id
+     * @return type
+     */
+    function add_file_to_case($filename, $blog_id) {
+    	$content_update = array(
+    			'image_side' => $filename
+    	);
+    
+    	$this->db->where('case_id', $blog_id);
+    	$update = $this->db->update('case_studies', $content_update);
+    	return $update;
+    }
+    
+    /**
+     *
+     * @param type $filename
+     * @param type $blog_id
+     * @return type
+     */
+    function add_pdf_to_case($filename, $blog_id) {
+    	$content_update = array(
+    			'pdf_link' => $filename
+    	);
+    
+    	$this->db->where('case_id', $blog_id);
+    	$update = $this->db->update('case_studies', $content_update);
+    	return $update;
+    }
 
     /**
      *

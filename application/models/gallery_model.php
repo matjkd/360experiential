@@ -9,7 +9,7 @@ class Gallery_model extends CI_Model {
         parent::__construct();
     }
 
-    function do_upload() {
+ function do_upload() {
         $this->gallery_path = './images/temp/';
         $this->gallery_path_url = base_url() . 'images/temp/';
         
@@ -21,7 +21,7 @@ class Gallery_model extends CI_Model {
         );
 
         $this->load->library('upload', $config);
-        if (!$this->upload->do_upload('file')) {
+        if (!$this->upload->do_upload('image')) {
             $error = array('error' => $this->upload->display_errors());
             print_r($error);
         } else {
@@ -42,6 +42,30 @@ class Gallery_model extends CI_Model {
         $this->load->library('image_lib', $config);
         $this->image_lib->resize();
         $this->image_lib->clear();
+    }
+    
+    function do_upload_pdf() {
+    	$this->gallery_path = './images/temp/';
+    	$this->gallery_path_url = base_url() . 'images/temp/';
+    
+    
+    	$config = array(
+    			'allowed_types' => 'pdf',
+    			'upload_path' => $this->gallery_path,
+    			'max_size' => 10000
+    	);
+    
+    	$this->load->library('upload', $config);
+    	if (!$this->upload->do_upload('pdf')) {
+    		$error = array('error' => $this->upload->display_errors());
+    		print_r($error);
+    	} else {
+    		$image_data = $this->upload->data();
+    	}
+    
+    
+    
+    	
     }
 
 }
