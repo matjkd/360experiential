@@ -1,4 +1,3 @@
-
 <?php foreach($content as $row):?>
 
 <h1><img src="<?=base_url()?>images/titles/<?=$config_theme?>/<?=$row->menu?>.png"/></h1>

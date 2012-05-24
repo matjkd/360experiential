@@ -23,19 +23,19 @@ var symbols = {
             id:'ambientmove2',
             type:'rect',
             rect:[819,347,0,0],
-            transform:[[-175,53],[0,0],[0],[1,1]]
+            transform:[[-175,53]]
          },
          {
             id:'guerillamove',
             type:'rect',
             rect:[402,192,0,0],
-            transform:[[22,236],[0,0],[0],[1,1]]
+            transform:[[22,236]]
          },
          {
             id:'viralmove',
             type:'rect',
             rect:[716,221,0,0],
-            transform:[[3,179],[0,0],[0],[1,1]]
+            transform:[[3,179]]
          }],
          symbolInstances: [
          {
@@ -63,8 +63,8 @@ var symbols = {
             ["transform", "translateY", '236px']
          ],
          "${_Stage}": [
-            ["color", "background-color", 'rgba(204,212,201,0)'],
             ["style", "height", '400px'],
+            ["color", "background-color", 'rgba(204,212,201,0)'],
             ["style", "width", '960px']
          ],
          "${_viralmove}": [
@@ -104,10 +104,10 @@ var symbols = {
       fill: ['rgba(0,0,0,0)','images/smoke-1.png']
    },
    {
-      transform: [[-268,-15],{},{},[0.695,0.695]],
-      id: 'viral2',
       type: 'image',
+      id: 'viral2',
       rect: [253,61,205,60],
+      transform: [[-268,-15],{},{},[0.695,0.695]],
       fill: ['rgba(0,0,0,0)','images/viral.png']
    }],
    symbolInstances: [
@@ -119,15 +119,15 @@ var symbols = {
             ["transform", "translateX", '-143px'],
             ["transform", "translateY", '-107px']
          ],
-         "${_viral2}": [
-            ["transform", "scaleX", '0.695'],
-            ["transform", "translateY", '-15.15px'],
-            ["transform", "translateX", '-268.262px'],
-            ["transform", "scaleY", '0.695']
-         ],
          "${symbolSelector}": [
             ["style", "height", '162px'],
             ["style", "width", '173px']
+         ],
+         "${_viral2}": [
+            ["transform", "scaleX", '0.695'],
+            ["transform", "scaleY", '0.695'],
+            ["transform", "translateY", '-15.15px'],
+            ["transform", "translateX", '-268.262px']
          ]
       }
    },
@@ -155,11 +155,10 @@ var symbols = {
    content: {
    dom: [
    {
-      rect: [-156,81,0,0],
       id: 'smoke',
-      opacity: 0,
-      transform: [[160,-81],[0,0],[0],[1.1734,1.1851]],
-      type: 'rect'
+      type: 'rect',
+      transform: [[160,-81],{},{},[1.1734,1.1851]],
+      rect: [-156,81,0,0]
    },
    {
       id: 'cloudhover',
@@ -167,11 +166,19 @@ var symbols = {
       rect: [0,0,0,0]
    },
    {
+      rect: [-18,-117,851,567],
+      transform: [[-319,-90],{},{},[0.3385,0.3385]],
+      id: 'TAG_CLOUDS2',
+      opacity: 0.48630136986301,
+      type: 'image',
+      fill: ['rgba(0,0,0,0)','images/TAG_CLOUDS.svg']
+   },
+   {
       rect: [55,73,340,60],
       id: 'ambient',
       transform: [[-133,-27],{},{},[0.6986,0.6986]],
       type: 'image',
-      fill: ['rgba(0,0,0,0)','images/ambient.png']
+      fill: ['rgba(0,0,0,0)','']
    }],
    symbolInstances: [
    {
@@ -191,9 +198,9 @@ var symbols = {
          ],
          "${_ambient}": [
             ["transform", "scaleX", '0.698'],
+            ["transform", "scaleY", '0.698'],
             ["transform", "translateY", '-27.04px'],
-            ["transform", "translateX", '-133.892px'],
-            ["transform", "scaleY", '0.698']
+            ["transform", "translateX", '-133.892px']
          ],
          "${symbolSelector}": [
             ["style", "height", '162px'],
@@ -205,6 +212,13 @@ var symbols = {
             ["style", "opacity", '0'],
             ["transform", "translateY", '-81.014px'],
             ["transform", "scaleY", '1.185']
+         ],
+         "${_TAG_CLOUDS2}": [
+            ["transform", "translateX", '-319.681px'],
+            ["transform", "scaleX", '0.338'],
+            ["style", "opacity", '0.48630136986301'],
+            ["transform", "translateY", '-90.677px'],
+            ["transform", "scaleY", '0.338']
          ]
       }
    },
@@ -212,7 +226,7 @@ var symbols = {
       "Default Timeline": {
          fromState: "Base State",
          toState: "",
-         duration: 877.28782081218,
+         duration: 877,
          autoPlay: true,
          labels: {
             "start": 0,
@@ -234,17 +248,17 @@ var symbols = {
    content: {
    dom: [
    {
-      transform: [[-306,-80],[0,0],[0],[1,1]],
-      id: 'smoke-14',
       type: 'image',
+      id: 'smoke-14',
       rect: [368,80,173,162],
+      transform: [[-306,-80],[0,0],[0],[1,1]],
       fill: ['rgba(0,0,0,0)','images/smoke-1.png']
    },
    {
-      transform: [[-159,-24],[0,0],[0],[0.9189,0.919]],
-      id: 'guerilla',
       type: 'image',
+      id: 'guerilla',
       rect: [149,81,243,60],
+      transform: [[-159,-24],[0,0],[0],[0.9189,0.919]],
       fill: ['rgba(0,0,0,0)','images/guerilla.png']
    }],
    symbolInstances: [
@@ -254,17 +268,17 @@ var symbols = {
       "Base State": {
          "${_guerilla}": [
             ["transform", "scaleX", '0.918'],
+            ["transform", "scaleY", '0.919'],
             ["transform", "translateY", '-24.41px'],
-            ["transform", "translateX", '-159.247px'],
-            ["transform", "scaleY", '0.919']
-         ],
-         "${_smoke-14}": [
-            ["transform", "translateX", '-306px'],
-            ["transform", "translateY", '-80px']
+            ["transform", "translateX", '-159.247px']
          ],
          "${symbolSelector}": [
             ["style", "height", '162px'],
             ["style", "width", '235.324994px']
+         ],
+         "${_smoke-14}": [
+            ["transform", "translateX", '-306px'],
+            ["transform", "translateY", '-80px']
          ]
       }
    },
@@ -304,8 +318,8 @@ var symbols = {
    states: {
       "Base State": {
          "${_ambient3}": [
-            ["transform", "translateX", '-1.63px'],
             ["transform", "scaleY", '0.285'],
+            ["transform", "translateX", '-1.63px'],
             ["style", "height", '162px'],
             ["transform", "scaleX", '0.293'],
             ["style", "opacity", '0'],
@@ -329,14 +343,14 @@ var symbols = {
             "middle": 9711
          },
          timeline: [
-            { id: "eid86", tween: [ "style", "${_ambient3}", "height", '162px', { fromValue: '162px'}], position: 0, duration: 0 },
-            { id: "eid85", tween: [ "style", "${_ambient3}", "width", '180px', { fromValue: '180px'}], position: 0, duration: 0 },
             { id: "eid90", tween: [ "transform", "${_ambient3}", "translateY", '-392px', { fromValue: '-110.975px'}], position: 0, duration: 37483 },
+            { id: "eid85", tween: [ "style", "${_ambient3}", "width", '180px', { fromValue: '180px'}], position: 0, duration: 0 },
+            { id: "eid86", tween: [ "style", "${_ambient3}", "height", '162px', { fromValue: '162px'}], position: 0, duration: 0 },
             { id: "eid89", tween: [ "transform", "${_ambient3}", "translateX", '-793px', { fromValue: '-1.63px'}], position: 0, duration: 37483 },
-            { id: "eid110", tween: [ "style", "${_ambient3}", "opacity", '1', { fromValue: '0'}], position: 0, duration: 2989 },
-            { id: "eid108", tween: [ "style", "${_ambient3}", "opacity", '0', { fromValue: '1'}], position: 19000, duration: 3121 },
             { id: "eid116", tween: [ "transform", "${_ambient3}", "scaleX", '1.139', { fromValue: '0.293'}], position: 0, duration: 22116 },
             { id: "eid327", tween: [ "transform", "${_ambient3}", "scaleX", '0.599', { fromValue: '1.139'}], position: 22116, duration: 3075 },
+            { id: "eid110", tween: [ "style", "${_ambient3}", "opacity", '1', { fromValue: '0'}], position: 0, duration: 2989 },
+            { id: "eid108", tween: [ "style", "${_ambient3}", "opacity", '0', { fromValue: '1'}], position: 19000, duration: 3121 },
             { id: "eid117", tween: [ "transform", "${_ambient3}", "scaleY", '1.262', { fromValue: '0.285'}], position: 0, duration: 22116 },
             { id: "eid328", tween: [ "transform", "${_ambient3}", "scaleY", '0.597', { fromValue: '1.262'}], position: 22116, duration: 3128 }         ]
       }
@@ -417,6 +431,10 @@ var symbols = {
    },
    states: {
       "Base State": {
+         "${symbolSelector}": [
+            ["style", "height", '162px'],
+            ["style", "width", '173px']
+         ],
          "${_viral5}": [
             ["style", "-webkit-transform-origin", [0,50], {valueTemplate:'@@0@@% @@1@@%'} ],
             ["style", "-moz-transform-origin", [0,50],{valueTemplate:'@@0@@% @@1@@%'}],
@@ -425,14 +443,10 @@ var symbols = {
             ["style", "-o-transform-origin", [0,50],{valueTemplate:'@@0@@% @@1@@%'}],
             ["transform", "scaleY", '0.158'],
             ["transform", "translateX", '-102.782px'],
-            ["transform", "scaleX", '0.14'],
             ["style", "height", '162px'],
+            ["transform", "scaleX", '0.14'],
             ["style", "opacity", '0'],
             ["transform", "translateY", '-87.798px'],
-            ["style", "width", '173px']
-         ],
-         "${symbolSelector}": [
-            ["style", "height", '162px'],
             ["style", "width", '173px']
          ]
       }
@@ -450,21 +464,21 @@ var symbols = {
             "afterend": 26503
          },
          timeline: [
-            { id: "eid170", tween: [ "style", "${_viral5}", "height", '162px', { fromValue: '162px'}], position: 0, duration: 0 },
-            { id: "eid192", tween: [ "style", "${_viral5}", "-webkit-transform-origin", [0,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [0,50]}], position: 0, duration: 0 },
-            { id: "eid445", tween: [ "style", "${_viral5}", "-moz-transform-origin", [0,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [0,50]}], position: 0, duration: 0 },
-            { id: "eid446", tween: [ "style", "${_viral5}", "-ms-transform-origin", [0,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [0,50]}], position: 0, duration: 0 },
-            { id: "eid447", tween: [ "style", "${_viral5}", "msTransformOrigin", [0,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [0,50]}], position: 0, duration: 0 },
-            { id: "eid448", tween: [ "style", "${_viral5}", "-o-transform-origin", [0,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [0,50]}], position: 0, duration: 0 },
             { id: "eid179", tween: [ "transform", "${_viral5}", "scaleY", '0.724', { fromValue: '0.158'}], position: 0, duration: 7906 },
             { id: "eid186", tween: [ "transform", "${_viral5}", "scaleY", '1.27', { fromValue: '0.724'}], position: 7906, duration: 25697 },
+            { id: "eid192", tween: [ "style", "${_viral5}", "-webkit-transform-origin", [0,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [0,50]}], position: 0, duration: 0 },
+            { id: "eid465", tween: [ "style", "${_viral5}", "-moz-transform-origin", [0,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [0,50]}], position: 0, duration: 0 },
+            { id: "eid466", tween: [ "style", "${_viral5}", "-ms-transform-origin", [0,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [0,50]}], position: 0, duration: 0 },
+            { id: "eid467", tween: [ "style", "${_viral5}", "msTransformOrigin", [0,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [0,50]}], position: 0, duration: 0 },
+            { id: "eid468", tween: [ "style", "${_viral5}", "-o-transform-origin", [0,50], { valueTemplate: '@@0@@% @@1@@%', fromValue: [0,50]}], position: 0, duration: 0 },
+            { id: "eid173", tween: [ "transform", "${_viral5}", "translateY", '-404px', { fromValue: '-87.798px'}], position: 0, duration: 37670 },
             { id: "eid182", tween: [ "style", "${_viral5}", "opacity", '1', { fromValue: '0'}], position: 0, duration: 1537 },
             { id: "eid190", tween: [ "style", "${_viral5}", "opacity", '0', { fromValue: '1'}], position: 18821, duration: 3043 },
             { id: "eid178", tween: [ "transform", "${_viral5}", "scaleX", '0.772', { fromValue: '0.14'}], position: 0, duration: 7875 },
             { id: "eid185", tween: [ "transform", "${_viral5}", "scaleX", '1.264', { fromValue: '0.772'}], position: 7875, duration: 25729 },
             { id: "eid172", tween: [ "transform", "${_viral5}", "translateX", '-1000px', { fromValue: '-102.782px'}], position: 0, duration: 37659 },
             { id: "eid169", tween: [ "style", "${_viral5}", "width", '173px', { fromValue: '173px'}], position: 0, duration: 0 },
-            { id: "eid173", tween: [ "transform", "${_viral5}", "translateY", '-404px', { fromValue: '-87.798px'}], position: 0, duration: 37670 }         ]
+            { id: "eid170", tween: [ "style", "${_viral5}", "height", '162px', { fromValue: '162px'}], position: 0, duration: 0 }         ]
       }
    }
 },
@@ -477,8 +491,8 @@ var symbols = {
    content: {
    dom: [
    {
-      rect: [172,27,340,60],
       transform: [[-200,-30],{},{},[0.8352,0.9333]],
+      rect: [172,27,340,60],
       id: 'ambient2',
       opacity: 1,
       type: 'image',
@@ -489,16 +503,16 @@ var symbols = {
    },
    states: {
       "Base State": {
-         "${symbolSelector}": [
-            ["style", "height", '55.98px'],
-            ["style", "width", '283.9px']
-         ],
          "${_ambient2}": [
             ["transform", "translateX", '-200.05px'],
             ["transform", "scaleX", '0.835'],
             ["style", "opacity", '1'],
             ["transform", "translateY", '-30.009px'],
             ["transform", "scaleY", '0.933']
+         ],
+         "${symbolSelector}": [
+            ["style", "height", '55.98px'],
+            ["style", "width", '283.9px']
          ]
       }
    },
@@ -506,7 +520,7 @@ var symbols = {
       "Default Timeline": {
          fromState: "Base State",
          toState: "",
-         duration: 0,
+         duration: 1500,
          autoPlay: true,
          labels: {
 
@@ -525,10 +539,10 @@ var symbols = {
    content: {
    dom: [
    {
-      rect: [1,0,173,162],
-      id: 'smoke-13',
       transform: [{},{},{},[1.0231]],
+      id: 'smoke-13',
       type: 'image',
+      rect: [1,0,173,162],
       fill: ['rgba(0,0,0,0)','images/smoke-1.png']
    }],
    symbolInstances: [
@@ -550,7 +564,7 @@ var symbols = {
       "Default Timeline": {
          fromState: "Base State",
          toState: "",
-         duration: 0,
+         duration: 1500,
          autoPlay: true,
          labels: {
 
@@ -589,7 +603,7 @@ var symbols = {
       "Default Timeline": {
          fromState: "Base State",
          toState: "",
-         duration: 0,
+         duration: 1500,
          autoPlay: true,
          labels: {
 

@@ -6,7 +6,7 @@
 
   
    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
-<!-- <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=<?=$maps_api?>" type="text/javascript"></script>-->
+
 
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
   

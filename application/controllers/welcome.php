@@ -170,10 +170,11 @@ class Welcome extends MY_Controller {
         $data['content'] = $this->content_model->get_content($id);
         $data['main_content'] = "user/login_form";
         $data['title'] = "Login";
+        $data['menu'] = 'login';
 
         $data['page'] = "login";
         $this->load->vars($data);
-        $this->load->view('template/main');
+        $this->load->view('template/plain');
     }
 
 }

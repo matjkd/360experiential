@@ -15,10 +15,13 @@ class Admin extends MY_Controller {
 
 	function index() {
 		$data['main_content'] = "admin/dashboard";
+		$id = "admin";
+		$data['content'] = $this->content_model->get_content($id);
+		$data['menu'] ="Admin";
 		$data['pages'] = $this->content_model->get_all_content();
 		$data['seo_links'] = $this->content_model->get_seo_links();
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function content() {
@@ -32,7 +35,7 @@ class Admin extends MY_Controller {
 		$data['main'] = "pages/dynamic";
 		$data['edit'] = "admin/edit/$id";
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function edit() {
@@ -49,7 +52,7 @@ class Admin extends MY_Controller {
 
 
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function edit_product() {
@@ -64,7 +67,7 @@ class Admin extends MY_Controller {
 
 
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function edit_content() {
@@ -98,7 +101,7 @@ class Admin extends MY_Controller {
 		$data['menu'] = $this->content_model->get_menus();
 		$data['news'] = $this->news_model->list_news();
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function editnews() {
@@ -111,7 +114,7 @@ class Admin extends MY_Controller {
 		$data['main'] = "admin/edit_news";
 		$data['menu'] = $this->content_model->get_menus();
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function edit_news() {
@@ -143,7 +146,7 @@ class Admin extends MY_Controller {
 		$data['assigned_practices'] = $this->professionals_model->assigned_practice_areas($id);
 
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function edit_pro() {
@@ -162,7 +165,7 @@ class Admin extends MY_Controller {
 		$data['main'] = "admin/edit_practice";
 		$data['menu'] = $this->content_model->get_menus();
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function edit_practice_submit() {
@@ -292,7 +295,7 @@ class Admin extends MY_Controller {
 
 		$data['slideshow'] = 'header/slideshow';
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function view_menus() {
@@ -302,7 +305,7 @@ class Admin extends MY_Controller {
 
 		$data['slideshow'] = 'header/slideshow';
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function add_new_menu() {
@@ -328,7 +331,7 @@ class Admin extends MY_Controller {
 
 		$data['slideshow'] = 'header/slideshow';
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function assign_practice() {
@@ -394,7 +397,7 @@ class Admin extends MY_Controller {
 		$data['pages'] = $this->content_model->get_all_content();
 
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function add_seo_content() {
@@ -405,7 +408,7 @@ class Admin extends MY_Controller {
 		$data['pages'] = $this->content_model->get_all_content();
 		$data['category'] = "seo";
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function add_testimonial_content() {
@@ -416,7 +419,7 @@ class Admin extends MY_Controller {
 		$data['pages'] = $this->content_model->get_all_content();
 		$data['category'] = "testimonial";
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function add_gallery_content() {
@@ -427,7 +430,7 @@ class Admin extends MY_Controller {
 		$data['pages'] = $this->content_model->get_all_content();
 		$data['category'] = "gallery";
 		$this->load->vars($data);
-		$this->load->view('template/main');
+		$this->load->view('template/plain');
 	}
 
 	function is_logged_in() {

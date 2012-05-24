@@ -1,7 +1,7 @@
 <!--Main content page for access360 site-->
 
 
-
+<?php if(isset($content)) {?>
 <?php foreach ($content as $row): ?>
 
 <div class="container" style="width:860px; height:60px;  padding:0 50px;">
@@ -43,9 +43,9 @@
     <?= $body ?>
             </div>
             
-               <div id="column2">
-    <?= $body ?>
-            </div>
+          <?=$this->load->view($main_content)?>
+            
+            
             <?php } ?>
         
 <?php endforeach;   ?>
@@ -57,4 +57,5 @@
     <?php } ?>
 </div>
 <?php endforeach; ?>
+<?php } ?>
     <div style="clear:both;"></div>
