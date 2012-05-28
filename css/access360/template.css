@@ -444,7 +444,7 @@ root {
 	display: none;
 	width: 130px;
 	height: 80px;
-	background: url('background/smallCloudAbout.png');
+	background: url('background/cloudPopupAbout.png');
 	position: absolute;
 	top: -22px;
 	left: -15px;
@@ -455,7 +455,7 @@ root {
 	display: none;
 	width: 180px;
 	height: 80px;
-	background: url('background/smallCloudWhat.png');
+	background: url('background/cloudPopupWhat.png');
 	position: absolute;
 	top: -22px;
 	left: 116px;
@@ -466,7 +466,7 @@ root {
 	display: none;
 	width: 260px;
 	height: 80px;
-	background: url('background/smallCloudPortfolio.png');
+	background: url('background/cloudPopupPortfolio.png');
 	position: absolute;
 	top: -22px;
 	left: 277px;
