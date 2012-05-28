@@ -443,32 +443,32 @@ root {
 #about-cloud {
 	display: none;
 	width: 130px;
-	height: 60px;
-	background: #ffffff;
+	height: 80px;
+	background: url('background/smallCloudAbout.png');
 	position: absolute;
-	top: -12px;
+	top: -22px;
 	left: -15px;
 	z-index: 1;
 }
 
 #what-cloud {
 	display: none;
-	width: 160px;
-	height: 60px;
-	background: #ffffff;
+	width: 180px;
+	height: 80px;
+	background: url('background/smallCloudWhat.png');
 	position: absolute;
-	top: -12px;
+	top: -22px;
 	left: 116px;
 	z-index: 1;
 }
 
 #portfolio-cloud {
 	display: none;
-	width: 230px;
-	height: 60px;
-	background: #ffffff;
+	width: 260px;
+	height: 80px;
+	background: url('background/smallCloudPortfolio.png');
 	position: absolute;
-	top: -12px;
+	top: -22px;
 	left: 277px;
 	z-index: 1;
 }
