@@ -54,6 +54,24 @@ class Admin extends MY_Controller {
 		$this->load->vars($data);
 		$this->load->view('template/plain');
 	}
+	
+	function edit_case_study() {
+	
+	
+		$id = $this->uri->segment(3);
+		$data['menu'] = $id;
+		$data['page'] = $id;
+		$data['content'] = $this->content_model->get_content('admin');
+		$data['case'] = $this->content_model->get_case_id($id);
+		$data['captcha'] = $this->captcha_model->initiate_captcha();
+		$data['seo_links'] = $this->content_model->get_seo_links();
+		$data['main_content'] = "admin/edit_case_study";
+	
+	
+	
+		$this->load->vars($data);
+		$this->load->view('template/plain');
+	}
 
 	function edit_product() {
 
@@ -215,8 +233,9 @@ class Admin extends MY_Controller {
 				// run insert model to write data to db
 				//upload file
 				//retrieve uploaded file
-				$this->upload_image();
-
+				$blog_id = mysql_insert_id();
+				$this->upload_image($blog_id);
+				$this->upload_pdf($blog_id);
 
 
 				redirect('/admin');   // or whatever logic needs to occur
@@ -270,6 +289,50 @@ class Admin extends MY_Controller {
 		}
 	}
 
+	function upload_pdf($id = 0) {
+	
+		$this->gallery_model->do_upload_pdf();
+	
+	
+		if (!empty($_FILES) && $_FILES['pdf']['error'] != 4) {
+	
+			$fileName = $_FILES['pdf']['name'];
+			$tmpName = $_FILES['pdf']['tmp_name'];
+			$fileName = str_replace(" ", "_", $fileName);
+			$filelocation = $fileName;
+	
+			$thefile = file_get_contents($tmpName, true);
+	
+			//add filename into database
+			//get blog id
+			if ($id == 0) {
+				$blog_id = mysql_insert_id();
+			} else {
+				$blog_id = $id;
+			}
+			
+			$this->content_model->add_pdf_to_case($fileName, $blog_id);
+			//move the file
+	
+			if ($this->s3->putObject($thefile, $this->bucket, $filelocation, S3:: ACL_PUBLIC_READ)) {
+				//echo "We successfully uploaded your file.";
+				$this->session->set_flashdata('message', ' pdf uploaded successfully');
+			} else {
+				//echo "Something went wrong while uploading your file... sorry.";
+				$this->session->set_flashdata('message', 'your pdf did not upload');
+			}
+	
+				
+			//delete files from server
+			$this->gallery_path = "./images/temp";
+			unlink($this->gallery_path . '/' . $fileName . '');
+				
+		} else {
+	
+			$this->session->set_flashdata('message', 'pdf Added');
+		}
+	}
+	
 
 
 	function add_case() {

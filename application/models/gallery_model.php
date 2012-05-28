@@ -52,7 +52,7 @@ class Gallery_model extends CI_Model {
     	$config = array(
     			'allowed_types' => 'pdf',
     			'upload_path' => $this->gallery_path,
-    			'max_size' => 10000
+    			'max_size' => 100000
     	);
     
     	$this->load->library('upload', $config);

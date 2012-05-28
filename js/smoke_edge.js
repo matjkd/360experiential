@@ -171,14 +171,14 @@ var symbols = {
       id: 'TAG_CLOUDS2',
       opacity: 0.48630136986301,
       type: 'image',
-      fill: ['rgba(0,0,0,0)','images/TAG_CLOUDS.svg']
+      fill: ['rgba(0,0,0,0)','']
    },
    {
       rect: [55,73,340,60],
       id: 'ambient',
       transform: [[-133,-27],{},{},[0.6986,0.6986]],
       type: 'image',
-      fill: ['rgba(0,0,0,0)','']
+      fill: ['rgba(0,0,0,0)','images/ambient.png']
    }],
    symbolInstances: [
    {

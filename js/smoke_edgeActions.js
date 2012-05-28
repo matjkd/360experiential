@@ -124,7 +124,7 @@ unhoverAmbient();
 
 Symbol.bindElementAction(compId, symbolName, "${_ambient3}", "click", function(sym, e) {
 // insert code for mouse leave here
-CloudpopUp();
+//CloudpopUp();
 });
 //Edge binding end
 

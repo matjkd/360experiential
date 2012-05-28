@@ -42,6 +42,7 @@ class Welcome extends MY_Controller {
 
     function get_content_data($menu) {
         $data['content'] = $this->content_model->get_content($menu);
+        $data['case_studies'] = $this->content_model->get_case_studies();
         foreach ($data['content'] as $row):
 
             $data['title'] = $row->title;
@@ -115,6 +116,8 @@ class Welcome extends MY_Controller {
 
         $data['captcha'] = $this->captcha_model->initiate_captcha();
 
+        
+        
         $data['sidebar'] = "sidebox/side";
         $data['main_content'] = "global/" . $this->config_theme . "/content";
         //$data['cats'] = $this->products_model->get_cats();

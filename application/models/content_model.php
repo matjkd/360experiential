@@ -54,6 +54,18 @@ class Content_model extends CI_Model {
             return $query->result();
         }
     }
+    
+    
+    function get_case_id($id) {
+    
+    	$this->db->where('case_id', $id);
+    	$query = $this->db->get('case_studies');
+    	if ($query->num_rows == 1)
+    		; {
+    		return $query->result();
+    	}
+    }
+    
 
     function edit_content($id) {
 
@@ -83,6 +95,13 @@ class Content_model extends CI_Model {
         if ($query->num_rows > 0) {
             return $query->result();
         }
+    }
+    
+    function get_case_studies() {
+    	$query = $this->db->get('case_studies');
+    	if ($query->num_rows > 0) {
+    		return $query->result();
+    	}
     }
 
     function get_all_products() {
