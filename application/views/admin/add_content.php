@@ -21,6 +21,7 @@ Category:
 	value="<?=set_value('category', $category)?>" disable="disabled"
 	onFocus="this.blur();">
 <br />
+<?=form_input('site', 'experiential')?>
 Content:
 <br />
 <textarea

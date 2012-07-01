@@ -43,6 +43,7 @@ class Welcome extends MY_Controller {
     function get_content_data($menu) {
         $data['content'] = $this->content_model->get_content($menu);
         $data['case_studies'] = $this->content_model->get_case_studies();
+        $data['what_we_do'] = $this->content_model->get_content('What-we-do');
         foreach ($data['content'] as $row):
 
             $data['title'] = $row->title;

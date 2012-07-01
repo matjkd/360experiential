@@ -1,7 +1,7 @@
 
 <?php foreach($case as $row):?>
 
-<?=form_open_multipart("admin/edit_case_study")?>
+<?=form_open_multipart("admin/update_case_study")?>
 Title:
 <?=form_input('title', $row->case_title)?>
 <br />
@@ -18,11 +18,35 @@ Title:
 </p>
 
 <p class="Image">
-	<?= form_label('Image') ?>
+	<?= form_label('Side Image') ?>
 	<br />
 	<?=$row->image_side?>
 	<br />
-	<?= form_upload('image') ?>
+	<?= form_upload('image_side') ?>
+</p>
+
+<p class="Image">
+	<?= form_label('Image 1') ?>
+	<br />
+	<?=$row->image_1?>
+	<br />
+	<?= form_upload('image_1') ?>
+</p>
+
+<p class="Image">
+	<?= form_label('Image 2') ?>
+	<br />
+	<?=$row->image_2?>
+	<br />
+	<?= form_upload('image_2') ?>
+</p>
+
+<p class="Image">
+	<?= form_label('Image 3') ?>
+	<br />
+	<?=$row->image_3?>
+	<br />
+	<?= form_upload('image_3') ?>
 </p>
 
 Content:
@@ -32,6 +56,7 @@ Content:
 </textarea>
 
 <br />
+<?=form_hidden('case_id', $row->case_id)?>
 <input type="submit" class="wymupdate" />
 
 <?=form_close()?>

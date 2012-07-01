@@ -118,7 +118,7 @@ $(document).ready(function() {
 	/***************************************************************************
 	 * /* handle Menu Hover /
 	 **************************************************************************/
-
+	hoverMenu('#home-menu', '#home-cloud');
 	hoverMenu('#about-menu', '#about-cloud');
 
 	hoverMenu('#what-menu', '#what-cloud');

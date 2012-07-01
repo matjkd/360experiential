@@ -75,11 +75,14 @@ h5 {
 	top: 35%;
 	z-index: 300;
 	margin: 0 auto;
-	width: 600px;
-	height: 320px;
+	width: 480px;
+	height: 250px;
 	background: url('background/cloudPopup.png');
 	color: #1f313f;
 	opacity: 0.9;
+	padding:70px 60px 0;
+	text-align:center;
+	
 }
 
 root {
@@ -440,14 +443,25 @@ root {
 	padding-right: 50px;
 }
 
-#about-cloud {
+#home-cloud {
 	display: none;
 	width: 130px;
 	height: 80px;
 	background: url('background/cloudPopupAbout.png');
 	position: absolute;
 	top: -22px;
-	left: -15px;
+	left: -33px;
+	z-index: 1;
+}
+
+#about-cloud {
+	display: none;
+	width: 180px;
+	height: 80px;
+	background: url('background/cloudPopupWhat.png');
+	position: absolute;
+	top: -22px;
+	left: 75px;
 	z-index: 1;
 }
 
@@ -458,7 +472,7 @@ root {
 	background: url('background/cloudPopupWhat.png');
 	position: absolute;
 	top: -22px;
-	left: 116px;
+	left: 239px;
 	z-index: 1;
 }
 
@@ -469,7 +483,7 @@ root {
 	background: url('background/cloudPopupPortfolio.png');
 	position: absolute;
 	top: -22px;
-	left: 277px;
+	left: 390px;
 	z-index: 1;
 }
 
