@@ -313,7 +313,10 @@ class Admin extends MY_Controller {
 
 				
 				//check pdf field is not null
-				if($this->input->post('pdf') != NULL) {
+				
+				$pdf_value =  $_FILES['pdf']['name'];
+				echo $pdf_value;
+				if($pdf_value != NULL) {
 					$this->upload_pdf($id);
 					echo " pdf";
 				} else {
@@ -420,7 +423,9 @@ class Admin extends MY_Controller {
 			$this->content_model->add_pdf_to_case($fileName, $blog_id);
 			//move the file
 
-			if ($this->s3->putObject($thefile, $this->bucket, $filelocation, S3:: ACL_PUBLIC_READ)) {
+			
+			
+			if ($this->s3->putObject($thefile, $this->bucket, $filelocation, S3:: ACL_PUBLIC_READ, array(), array('Content-Type'=>'application/pdf'))) {
 				//echo "We successfully uploaded your file.";
 				$this->session->set_flashdata('message', ' pdf uploaded successfully');
 			} else {

@@ -29,6 +29,7 @@ $(document).ready(function(){
          autoStart: true, 
          slideInterval: 3000
  });
+	 $('#accordion-1').fadeIn('slow');
 });
 
 </script>
