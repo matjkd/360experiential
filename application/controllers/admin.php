@@ -98,7 +98,7 @@ class Admin extends MY_Controller {
 			$this->content_model->edit_content($id);
 
 
-			$this->upload_image($id);
+			//$this->upload_image($id);
 
 
 			redirect("admin/edit/$id");
@@ -332,7 +332,7 @@ class Admin extends MY_Controller {
 		}
 	}
 
-	function upload_image($id = 0, $field, $height = 110) {
+	function upload_image($id = 0, $field = 0, $height = 110) {
 
 		if($field === 0) {
 			$field = "image";

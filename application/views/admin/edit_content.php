@@ -4,7 +4,7 @@
 <?php  $id = $row->content_id;?>
 
 
-<?=form_open("admin/edit_content/$row->content_id")?> 
+<?=form_open_multipart("admin/edit_content/$row->content_id")?> 
 Title: <br/><?=form_input('title', $row->title)?><br/>
 Menu link:<br/><?=form_input('menu', $row->menu)?>
 <br/>

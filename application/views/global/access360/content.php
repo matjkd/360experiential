@@ -1,17 +1,17 @@
 <!--Main content page for access360 site-->
 
-
 <?php if(isset($content)) {?>
 <?php foreach ($content as $row): ?>
 
 <div class="container" style="width:860px; height:60px;  padding:0 50px;">
       <?php if($menu == 'portfolio') {} else {?>  <h1><?= $row->title ?></h1><?php } ?>
 </div>
+
 <?php if (isset($slideshow) && $slideshow != NULL) { ?>
 		<div class="container">
 		 <div id="cloudpopup">
             </div>
-			<?= $this->load->view('slideshow/' . $slideshow) ?>
+			<?= $this->load->view('slideshow/accordion') ?>
 		</div>
 		<?php } else { ?>
     <?php
@@ -40,10 +40,12 @@
         
         
             <div id="column1">
-    <?= $body ?>
+  
             </div>
-            
+            <?php if(isset($main_content)) {?>
           <?=$this->load->view($main_content)?>
+          <?php }?>
+            <?= $body ?>
             
             
             <?php } ?>

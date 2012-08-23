@@ -41,16 +41,9 @@
 $route['default_controller'] = "welcome";
 $route['about'] = '/welcome/content';
 $route['portfolio'] = '/welcome/content';
-$route['mailbox'] = '/welcome/home';
-$route['map'] = '/welcome/home';
-$route['contact'] = '/welcome/home';
-$route['spaces'] = '/welcome/home';
-$route['voffice'] = '/welcome/home';
+$route['what_we_do'] = '/welcome/content';
 $route['login'] = '/welcome/login';
-$route['othersites'] = '/welcome/home';
-$route['services'] = '/welcome/home';
-$route['design'] = '/welcome/home';
-$route['news'] = '/welcome/home';
+
 $route['404_override'] = '';
 
 

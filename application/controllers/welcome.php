@@ -27,7 +27,7 @@ class Welcome extends MY_Controller {
 
 
         $data['sidebar'] = "sidebox/side";
-        $data['main_content'] = "global/" . $this->config_theme . "/content";
+      //  $data['main_content'] = "global/" . $this->config_theme . "/content";
         $data['cats'] = $this->products_model->get_cats();
         $data['products'] = $this->products_model->get_all_products();
         $data['section2'] = 'global/links';
@@ -43,7 +43,7 @@ class Welcome extends MY_Controller {
     function get_content_data($menu) {
         $data['content'] = $this->content_model->get_content($menu);
         $data['case_studies'] = $this->content_model->get_case_studies();
-        $data['what_we_do'] = $this->content_model->get_content('What-we-do');
+        $data['what_we_do'] = $this->content_model->get_content('what_we_do');
         foreach ($data['content'] as $row):
 
             $data['title'] = $row->title;
@@ -60,6 +60,42 @@ class Welcome extends MY_Controller {
         endforeach;
         $this->load->vars($data);
         return $data;
+    }
+    
+    function pages() {
+    
+    	$segment_active = $this->uri->segment(1);
+    	if ($segment_active != NULL) {
+    		$data['menu'] = $this->uri->segment(1);
+    	} else {
+    		$data['menu'] = 'experiential';
+    	}
+    
+    	$this->get_content_data($data['menu']);
+    
+    	$data['captcha'] = $this->captcha_model->initiate_captcha();
+    	$data['seo_links'] = $this->content_model->get_seo_links();
+    
+    
+    
+    	$data['sidebar'] = "sidebox/side";
+    	
+    	$data['cats'] = $this->products_model->get_cats();
+    	$data['products'] = $this->products_model->get_all_products();
+    	$data['section2'] = 'global/links';
+    	if ($this->session->flashdata('message')) {
+    		$data['message'] = $this->session->flashdata('message');
+    	}
+    
+    
+    
+    	if($data['menu'] == 'portfolio') {
+    		$this->load->vars($data);
+    		$this->load->view('template/access360/portfolio');
+    	} else {
+    		$this->load->vars($data);
+    		$this->load->view('template/plain');
+    	}
     }
     
     function content() {
@@ -79,7 +115,7 @@ class Welcome extends MY_Controller {
 
 
         $data['sidebar'] = "sidebox/side";
-        $data['main_content'] = "global/" . $this->config_theme . "/content";
+       $data['main_content'] = "";
         $data['cats'] = $this->products_model->get_cats();
         $data['products'] = $this->products_model->get_all_products();
         $data['section2'] = 'global/links';
@@ -117,10 +153,10 @@ class Welcome extends MY_Controller {
 
         $data['captcha'] = $this->captcha_model->initiate_captcha();
 
-        
+       
         
         $data['sidebar'] = "sidebox/side";
-        $data['main_content'] = "global/" . $this->config_theme . "/content";
+       // $data['main_content'] = "global/" . $this->config_theme . "/content";
         //$data['cats'] = $this->products_model->get_cats();
         //$data['products'] = $this->products_model->get_all_products();
         $data['section2'] = 'global/links';
@@ -153,7 +189,7 @@ class Welcome extends MY_Controller {
         $data['captcha'] = $this->captcha_model->initiate_captcha();
 
 
-        $data['main_content'] = "global/" . $this->config_theme . "/content";
+       // $data['main_content'] = "global/" . $this->config_theme . "/content";
         $data['cats'] = $this->products_model->get_cats();
         $data['products'] = $this->products_model->get_all_products();
         $data['section2'] = 'global/links';
