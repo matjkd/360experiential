@@ -9,8 +9,7 @@
 
 <?php if (isset($slideshow) && $slideshow != NULL) { ?>
 		<div class="container">
-		 <div id="cloudpopup">
-            </div>
+		
 			<?= $this->load->view('slideshow/accordion') ?>
 		</div>
 		<?php } else { ?>
@@ -34,8 +33,7 @@
         <div class="container" style="width:860px; background:#fff; padding:50px">
         
         
-		 <div id="cloudpopup">
-            </div>
+	
         
         
         

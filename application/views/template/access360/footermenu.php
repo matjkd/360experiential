@@ -12,7 +12,7 @@
     <ul>
         
         
-        <li>site map</li>
+        
         <li>Terms &amp; Conditions</li>
         <li>Email us</li>
     </ul> 

@@ -85,6 +85,22 @@ h5 {
 	
 }
 
+#cloudpopup2 {
+	position: absolute;
+	display: none;
+	top: 35%;
+	z-index: 300;
+	margin: 0 auto;
+	width: 480px;
+	height: 250px;
+	background: url('background/cloudPopup.png');
+	color: #1f313f;
+	opacity: 0.9;
+	padding:70px 60px 0;
+	text-align:center;
+	
+}
+
 root {
 	display: block;
 }

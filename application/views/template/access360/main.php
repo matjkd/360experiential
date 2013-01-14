@@ -22,19 +22,8 @@
 			</div>
 
 		</div>
-
-		<div id="cloudpopup">
-			<h4>What we do...</h4>
-
-			<p>Access360 are a team of professionals with an unrivalled
-				experience in all aspects of production material and techniques.</p>
-
-			<p>Whether it is an experiential project or the craziest ambient
-				requirement, you can rest assured that we have the credentials and
-				experience to not only provide a reliable first class service, but
-				also save you a few pennies at the same time!</p>
-		</div>
-
+		
+	<?=$this->load->view('template/access360/cloudpopup')?>
 	</div>
 
 

@@ -39,6 +39,7 @@ $(function() {
 	});
 	placeFooter();
 	centerCloud();
+	centerCloud2();
 	// hide it before it's positioned
 	$('#fixedbase').css('display', 'inline');
 });
@@ -59,6 +60,13 @@ function centerCloud() {
 	$('#cloudpopup').css('left', widthoffset);
 
 }
+function centerCloud2() {
+	var windWidth = $(window).width();
+	var cloudWidth = $('#cloudpopup2').width();
+	var widthoffset = (parseInt(windWidth) / 2) - (parseInt(cloudWidth) / 2);
+	$('#cloudpopup2').css('left', widthoffset);
+
+}
 
 /*******************************************************************************
  * /* Cloud Popup and hover functions /
@@ -74,8 +82,21 @@ function CloudpopUp() {
 	
 }
 
+function CloudpopUp2() {
+
+	if ($('#cloudpopup2').is(":visible")) {
+		$('#cloudpopup2').stop(true, true).fadeOut();
+	} 
+
+		$('#cloudpopup2').stop(true, true).fadeIn();
+	
+}
 function hideCloudpopUp() {
 	$('#cloudpopup').stop().fadeOut();
+
+}
+function hideCloudpopUp2() {
+	$('#cloudpopup2').stop().fadeOut();
 
 }
 
@@ -114,11 +135,31 @@ $(document).ready(function() {
 		}
 
 	});
+	
+	$('#cloudpopup2').hover(function() {
+		mouse_is_inside = true;
+	}, function() {
+		mouse_is_inside = false;
+	});
+
+	$("body").mouseup(function() {
+
+		if ($('#cloudpopup2').is(":visible")) {
+
+			if (!mouse_is_inside) {
+				hideCloudpopUp2()
+			}
+		} else {
+
+		}
+
+	});
 
 	/***************************************************************************
 	 * /* handle Menu Hover /
 	 **************************************************************************/
 	hoverMenu('#home-menu', '#home-cloud');
+	
 	hoverMenu('#about-menu', '#about-cloud');
 
 	hoverMenu('#what-menu', '#what-cloud');
@@ -127,6 +168,6 @@ $(document).ready(function() {
 
 	$('#about-menu').click(CloudpopUp);
 
-	$('#what-menu').click(CloudpopUp);
+	$('#what-menu').click(CloudpopUp2);
 
 });
